@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.pizzaorderapp">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Pizzaorderapp"
+        tools:targetApi="31">
+
+        <!-- 主畫面（啟動入口） -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- ✅ 主餐選擇畫面 -->
+        <activity
+            android:name=".MainDishActivity"
+            android:exported="false" />
+
+        <!-- ✅ 附餐選擇畫面 -->
+        <activity
+            android:name=".SideDishActivity"
+            android:exported="false" />
+
+        <!-- ✅ 店家資訊頁面 -->
+        <activity
+            android:name=".StoreInfoActivity"
+            android:exported="false" />
+
+        <!-- ❌ 不需要存在的類別（你可以刪除以下這些） -->
+        <!--
+        <activity android:name=".activity_store_info" android:exported="false" />
+        <activity android:name=".activity_store_item" android:exported="false" />
+        <activity android:name=".dialog_add_store" android:exported="false" />
+        <activity android:name=".activity_main_dish" android:exported="false" />
+        <activity android:name=".rfehoif" android:exported="false" />
+        -->
+
+    </application>
+
+</manifest>
